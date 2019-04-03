@@ -1,0 +1,271 @@
+import { Head } from 'mdx-deck'
+
+import Header from './components/header'
+import Image from './components/image'
+import LiveCode from './components/live-code'
+
+import theme from './theme'
+export { default as theme } from './theme'
+
+<Head>
+  <title>React, The Inglorious Way</title>
+</Head>
+
+# React, The Inglorious Way
+
+<Image
+  src={`./assets/images/ic_${theme.name}.png`}
+  width="8rem"
+  height="8rem"
+/>
+
+[Matteo Antony Mistretta](https://www.linkedin.com/in/antonymistretta/)
+
+[Inglorious Coderz](https://www.ingloriouscoderz.it)
+
+[@antonymistretta](https://twitter.com/antonymistretta)
+
+<Header />
+
+---
+
+## Why
+
+- React is evolving [rapidly](https://reactjs.org/blog/)
+- A few rules, lots of [strategies](https://reactjs.org/docs/design-principles.html)
+- Learning them makes us better [coders](https://medium.com/@FunctionalWorks/what-functional-programming-is-why-it-makes-you-better-29ee34284a6e)
+
+---
+
+<div style={{ display: 'flex', alignItems: 'center' }}>
+  <pre className="language-bash">antony@ingloriouscoderz ~> whoami</pre>
+  <Image src="./assets/images/mobile-website-mockup.png" height="100vh" />
+</div>
+
+---
+
+## Agenda
+
+- [_Class Components_](#4)
+- Container/Presentational
+- Higher-Order Components
+- Render Props
+- Hooks
+
+---
+
+<LiveCode
+  title="Class Component - Before"
+  code={require('!raw-loader!./live-coding/class-component/before')}
+/>
+
+---
+
+<LiveCode
+  title="Class Component - After"
+  code={require('!raw-loader!./live-coding/class-component/after')}
+/>
+
+---
+
+## Agenda
+
+- Class Components
+- [_Container/Presentational_](#7)
+- Higher-Order Components
+- Render Props
+- Hooks
+
+---
+
+<LiveCode
+  title="Container/Presentational - Before"
+  code={require('!raw-loader!./live-coding/container-presentational/before')}
+/>
+
+---
+
+<LiveCode
+  title="Container/Presentational - After"
+  code={require('!raw-loader!./live-coding/container-presentational/after')}
+/>
+
+---
+
+<LiveCode
+  title="Container/Presentational - Extra Speed"
+  code={require('!raw-loader!./live-coding/container-presentational/extra-speed')}
+/>
+
+---
+
+## Agenda
+
+- Class Components
+- Container/Presentational
+- [_Higher-Order Components_](#11)
+- Render Props
+- Hooks
+
+---
+
+<LiveCode
+  title="Higher-Order Components - Before"
+  code={require('!raw-loader!./live-coding/hocs/before')}
+/>
+
+---
+
+<LiveCode
+  title="Higher-Order Components - After"
+  code={require('!raw-loader!./live-coding/hocs/after')}
+/>
+
+---
+
+<LiveCode
+  title="Higher-Order Components - Recompose"
+  code={require('!raw-loader!./live-coding/hocs/recompose')}
+/>
+
+---
+
+## Agenda
+
+- Class Components
+- Container/Presentational
+- Higher-Order Components
+- [_Render Props_](#15)
+- Hooks
+
+---
+
+<LiveCode
+  title="Render Props - Children"
+  code={require('!raw-loader!./live-coding/render-props/children')}
+/>
+
+---
+
+<LiveCode
+  title="Render Props - Component"
+  code={require('!raw-loader!./live-coding/render-props/component')}
+/>
+
+---
+
+<LiveCode
+  title="Render Props - Render"
+  code={require('!raw-loader!./live-coding/render-props/render')}
+/>
+
+---
+
+<LiveCode
+  title="Render Props - Function As Child Component"
+  code={require('!raw-loader!./live-coding/render-props/facc')}
+/>
+
+---
+
+<LiveCode
+  title="Render Props - Before"
+  code={require('!raw-loader!./live-coding/render-props/before')}
+/>
+
+---
+
+<LiveCode
+  title="Render Props - After"
+  code={require('!raw-loader!./live-coding/render-props/after')}
+/>
+
+---
+
+<LiveCode
+  title="Render Props - Ouch"
+  code={require('!raw-loader!./live-coding/render-props/ouch')}
+/>
+
+---
+
+## Agenda
+
+- Class Components
+- Container/Presentational
+- Higher-Order Components
+- Render Props
+- [_Hooks_](#23)
+
+---
+
+- They [separate](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889) stateful logic
+- They are [composable](https://reactjs.org/docs/hooks-custom.html) functions
+- They allow us to go fully [functional](https://hackernoon.com/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc)
+- They keep our component hierarchy [flat](https://itnext.io/why-reacts-hooks-api-is-a-game-changer-8731c2b0a8c)
+
+---
+
+<LiveCode
+  title="Hooks - Before"
+  code={require('!raw-loader!./live-coding/hooks/before')}
+/>
+
+---
+
+<LiveCode
+  title="Hooks - After"
+  code={require('!raw-loader!./live-coding/hooks/after')}
+/>
+
+---
+
+## Which to use?
+
+---
+
+<Image src="./assets/images/hooks-vs-recompose.png" width="33vw" />
+
+---
+
+<Image src="./assets/images/waiting.jpg" width="33vw" />
+
+---
+
+<Image src="./assets/images/andrew-on-recompose.png" height="33vh" />
+<Image src="./assets/images/dan-on-recompose.png" height="50vh" />
+
+---
+
+<LiveCode
+  title="HOCs vs. All"
+  code={require('!raw-loader!./live-coding/hocs/vs-all')}
+/>
+
+---
+
+<LiveCode
+  title="Render Props vs. All"
+  code={require('!raw-loader!./live-coding/render-props/vs-all')}
+/>
+
+---
+
+## Which to use?
+
+- [Classes](#4): getSnapshotBeforeUpdate / componentDidCatch
+- [HOCs](#11): proxy / _before_ render (change props, prevent renders)
+- [Render Props](#15): mix logic / multiple sub-items / switch behavior
+- [Hooks](#23): everything else
+
+---
+
+# Thank you.
+
+Questions?
+
+[html](https://www.ingloriouscoderz.it/react-the-inglorious-way)
+|
+[pdf](https://www.ingloriouscoderz.it/react-the-inglorious-way/presentation.pdf)
+|
+[source](https://github.com/IngloriousCoderz/react-the-inglorious-way)
